@@ -1,8 +1,11 @@
 package com.ynov.serviceWeb.model;
 
+import javax.persistence.Entity;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Entity
 @Document(collection = "patients")
 public class Patient {
 
