@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ynov.serviceWeb.dto.PatientDTO;
@@ -19,34 +18,33 @@ import com.ynov.serviceWeb.service.PatientService;
 import com.ynov.serviceWeb.util.ObjectMapperUtils;
 
 @RestController
-@RequestMapping("/patients")
 public class PatientController {
 
 	@Autowired
 	public PatientService patientService;
 
-	@GetMapping(value = "/")
+	@GetMapping(value = "/patients")
 	public List<PatientDTO> getAllPatients() {
 		return ObjectMapperUtils.mapAll(patientService.findAll(), PatientDTO.class);
 	}
 
-	@GetMapping("/byId/{PatientId}")
+	@GetMapping("/patient/{PatientId}")
 	public PatientDTO getPatientByPatientId(@PathVariable("PatientId") String patientId) {
 		return ObjectMapperUtils.map(patientService.findPatientById(patientId), PatientDTO.class);
 	}
 
-	@GetMapping(value = "/byName/{name}")
+	@GetMapping(value = "/patient/{name}")
 	public PatientDTO getPatientByName(@PathVariable("name") String name) {
 		return ObjectMapperUtils.map(patientService.findPatientByName(name), PatientDTO.class);
 	}
 
-	@PostMapping(value = "/save")
+	@PostMapping(value = "/patient")
 	public ResponseEntity<?> saveOrUpdatePatient(@RequestBody PatientDTO PatientDTO) {
 		patientService.saveOrUpdatePatient(ObjectMapperUtils.map(PatientDTO, Patient.class));
 		return new ResponseEntity("Patient added successfully", HttpStatus.OK);
 	}
 
-	@DeleteMapping(value = "/delete/{id}")
+	@DeleteMapping(value = "/patient/{id}")
 	public ResponseEntity<?> deletePatientByPatientId(@PathVariable("id") String id) {
 		patientService.deletePatientById(id);
 		return new ResponseEntity("Patient deleted successfully", HttpStatus.OK);
