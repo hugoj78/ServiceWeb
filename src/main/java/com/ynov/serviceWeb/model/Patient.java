@@ -10,13 +10,15 @@ public class Patient {
 	private String id;
 	private String name;
 	private int age;
+	private String id_pro;
 
 	public Patient() {
 	}
 
-	public Patient(String name, int age) {
+	public Patient(String name, int age, String id_pro) {
 		this.name = name;
 		this.age = age;
+		this.id_pro = id_pro;
 	}
 
 	public String getId() {
@@ -43,9 +45,17 @@ public class Patient {
 		this.age = age;
 	}
 
+	public String getId_pro() {
+		return id_pro;
+	}
+
+	public void setId_pro(String id_pro) {
+		this.id_pro = id_pro;
+	}
+
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", age=" + age + "]";
+		return "Patient [id=" + id + ", name=" + name + ", age=" + age + ", id_pro=" + id_pro + "]";
 	}
 
 }
