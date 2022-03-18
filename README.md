@@ -1,10 +1,3 @@
-
-
-```
-docker compose up
-```
-
-
 # EGU Hugo-Jean : Web Service
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
