@@ -11,8 +11,9 @@ API pour cours Web Service
 
 ### Installation
 
-
-```docker-compose up ``` 
+```
+docker-compose up 
+``` 
 
 Ouvrir votre browser à l'url suviante : http://localhost:8081/swagger-ui.html pour avoir accès au swagger
 
