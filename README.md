@@ -1,19 +1,19 @@
-# EGU Hugo-Jean : Web Service
+# 🚀 EGU Hugo-Jean : Web Service 🚀
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
 
-API pour cours Web Service
+API pour cours Web Service 💻
 
-### Pre requis
+### Pre requis 🐳
 
 - docker installed
 - docker-compose
 
-### Installation
+### Installation 🔌
 
 ```
 docker-compose up 
 ``` 
 
-Ouvrir votre browser à l'url suviante : http://localhost:8081/swagger-ui.html pour avoir accès au swagger
+Ouvrir votre browser 🌏 à l'url suviante : http://localhost:8081/swagger-ui.html pour avoir accès au swagger
 
