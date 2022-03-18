@@ -33,7 +33,7 @@ public class PatientController {
 		return ObjectMapperUtils.map(patientService.findPatientById(patientId), PatientDTO.class);
 	}
 
-	@GetMapping(value = "/patient/{name}")
+	@GetMapping(value = "/patient/byName/{name}")
 	public PatientDTO getPatientByName(@PathVariable("name") String name) {
 		return ObjectMapperUtils.map(patientService.findPatientByName(name), PatientDTO.class);
 	}
